@@ -21,19 +21,22 @@ void updateTopThree(long newNumber)
     {
         third = newNumber;
     }
-    else { /* No update */}
+    else
+    {
+        /* No update */
+    }
 }
 
 using namespace std;
 
 int main()
 {
-    ifstream input ("input/day1.txt");
+    ifstream input("input/day1.txt");
     string line;
     long calorieSum;
 
     first = second = third = -1;
-    
+
     if (input.is_open())
     {
         while (getline(input, line))
@@ -43,7 +46,10 @@ int main()
             while (line != "")
             {
                 calorieSum += stoi(line);
-                if (!getline(input, line)) { break; }
+                if (!getline(input, line))
+                {
+                    break;
+                }
             }
             updateTopThree(calorieSum);
         }
@@ -52,7 +58,10 @@ int main()
         cout << "Top Three Elves: " << first + second + third << endl;
         input.close();
     }
-    else { cout << "Unable to open file." << endl; }
+    else
+    {
+        cout << "Unable to open file." << endl;
+    }
 
     return 0;
 }

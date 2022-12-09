@@ -8,8 +8,7 @@ using namespace std;
 
 int isContained(int a, int b, int x, int y)
 {
-    if ((a <= x && b >= y)
-        || (x <= a && y >= b))
+    if ((a <= x && b >= y) || (x <= a && y >= b))
     {
         return 1;
     }
@@ -18,8 +17,7 @@ int isContained(int a, int b, int x, int y)
 
 int isOverlapping(int a, int b, int x, int y)
 {
-    if ((a <= x && b >= x)
-        || (a <= y && b >= y))
+    if ((a <= x && b >= x) || (a <= y && b >= y))
     {
         return 1;
     }
@@ -30,8 +28,8 @@ int numberContained(ifstream &input, bool overlap)
 {
     string segment, lower, upper;
     vector<string> seglist;
-    /* 
-     * fLower - first lower limit 
+    /*
+     * fLower - first lower limit
      * fUpper - first upper limit
      * sLower - second lower limit
      * sUpper - second upper limit
@@ -49,7 +47,6 @@ int numberContained(ifstream &input, bool overlap)
         getline(first, upper);
         fUpper = stoi(upper);
 
-
         /* Second elf */
         getline(input, segment);
         stringstream second(segment);
@@ -65,8 +62,7 @@ int numberContained(ifstream &input, bool overlap)
         }
         else
         {
-            numberOverlapping += (isContained(fLower, fUpper, sLower, sUpper)
-                                  | isOverlapping(fLower, fUpper, sLower, sUpper));
+            numberOverlapping += (isContained(fLower, fUpper, sLower, sUpper) | isOverlapping(fLower, fUpper, sLower, sUpper));
         }
     }
 
@@ -75,7 +71,7 @@ int numberContained(ifstream &input, bool overlap)
 
 int main(int argc, char const *argv[])
 {
-    ifstream input ("input/day4.txt");
+    ifstream input("input/day4.txt");
 
     if (!input.is_open())
     {
