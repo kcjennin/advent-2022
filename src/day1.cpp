@@ -28,7 +28,7 @@ using namespace std;
 
 int main()
 {
-    ifstream input ("input.txt");
+    ifstream input ("input/day1.txt");
     string line;
     long calorieSum;
 

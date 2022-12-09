@@ -11,7 +11,7 @@ enum {
     SCISSORS,
     DRAW = SCISSORS,
     WIN = 6
-} PointsEnum;
+};
 
 /**
  * @brief Formats the line based on the expected outcome
@@ -146,7 +146,7 @@ int pointsFromLine(string line)
 
 int main(int argc, char const *argv[])
 {
-    ifstream input ("input.txt");
+    ifstream input ("input/day2.txt");
     string line;
     int points = 0;
 

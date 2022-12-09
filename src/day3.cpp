@@ -86,7 +86,7 @@ void taskTwo(ifstream &input)
 
 int main(int argc, char const *argv[])
 {
-    ifstream input ("input.txt");
+    ifstream input ("input/day3.txt");
 
     if (!input.is_open())
     {
